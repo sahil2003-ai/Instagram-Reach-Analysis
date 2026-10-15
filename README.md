@@ -47,10 +47,11 @@ Creators need to understand how reach and engagement metrics vary across posts, 
 
 ## 📂 Dataset
 
-Instagram data.csv is present. Prior documentation described 119 rows and 13 fields; verify these against the file before reporting.
+The repository CSV contains **119 rows × 13 columns**.
 
-- **Privacy and licensing:** Check source terms and avoid publishing personal, sensitive, or restricted data.
-- **Preprocessing:** Follow the actual SQL/notebook/report implementation; do not assume cleaning steps or row counts that have not been verified.
+- **Fields include:** impressions, reach sources (home, hashtags, explore, other), saves, comments, shares, likes, profile visits, follows, caption, and hashtags.
+- **Target variable:** No single target is assumed; define it explicitly if modelling.
+- Check missing values and duplicates in the notebook. Document the source, collection period, and any restrictions on reusing captions or hashtags.
 
 ## 🛠️ Tech Stack
 
@@ -102,13 +103,14 @@ Run Instagram_Reach_Analysis.ipynb from top to bottom after checking the CSV pat
 
 ## 📊 Results and Insights
 
-### Key Findings
+### Verified dataset dimensions
 
-Add chart-based findings only after reproducing them. Correlation is not causation.
+| Check | Result |
+|---|---:|
+| Rows | 119 |
+| Columns | 13 |
 
-### Evaluation
-
-For analytics projects, reconcile key totals and document metric definitions. For ML projects, report the baseline, split strategy, relevant metrics, and held-out evaluation results. Do not include unverified scores or business impact claims.
+The saved notebook provides exploratory analysis, but numerical correlations, leading reach sources, and model metrics were not independently reproduced in this review. Add findings only with supporting calculations or charts. Correlation should not be interpreted as causation.
 
 ## 🖼️ Screenshots
 
@@ -122,9 +124,9 @@ No image files were confirmed for this repository during this update. If you hav
 
 ## ⚠️ Limitations
 
-- Small samples may not generalize to other accounts or periods.
-- Dataset source and collection period need documentation.
-- No screenshot files were found in the repository.
+- The sample is small (119 posts) and may not generalize to other accounts or time periods.
+- Reach-source fields may overlap mathematically with impressions; check target definitions for leakage before modelling.
+- Document the data source, collection window, and any restrictions on caption/hashtag reuse.
 
 ## 🚀 Future Improvements
 
